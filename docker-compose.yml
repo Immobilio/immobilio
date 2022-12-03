@@ -1,0 +1,15 @@
+
+version: "3"
+services:
+    immobilier:
+        build: .
+        # restart: unless-stopped
+        
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/code
+        entrypoint:  python manage.py runserver 0.0.0.0:8000
+
+        
+    # If we like to add some other services (postgre database )
