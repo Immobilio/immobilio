@@ -5,7 +5,7 @@ WORKDIR /install
 COPY requirements.txt /requirements.txt
 
 RUN apk update \
-    && apk add  --no-cache curl gnupg postgresql-dev uwsgi uwsgi-python3 unixodbc-dev apt-utils build-essential gcc python3-dev musl-dev libffi-dev openssl-dev build-base alpine-sdk mariadb-dev g++ unixodbc-dev \
+    && apk add  --no-cache curl gnupg postgresql-dev uwsgi uwsgi-python3 unixodbc-dev gcc python3-dev musl-dev libffi-dev openssl-dev build-base alpine-sdk mariadb-dev g++ unixodbc-dev \
     && pip install --upgrade pip \
     && pip install --prefix=/install --no-warn-script-location -r /requirements.txt 
 
