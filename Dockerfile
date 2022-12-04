@@ -22,4 +22,4 @@ WORKDIR /code
 
 RUN apk --no-cache add libpq libstdc++ make zip uwsgi uwsgi-python3
 
-CMD python manage.py migrate
+CMD ["python", " manage.py", " migrate"]
